@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(32, 32, 32);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.box {
+  position: relative;
+  width: 250px;
+}
+.box input {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 1em;
+  transition: 0.5s ease-in;
+}
+.box span {
+  position: absolute;
+  margin-left: 10px;
+  left: 0;
+  top: 10px;
+  pointer-events: none;
+  color: rgb(172, 167, 167);
+  padding: 0 10px;
+  transition: 0.3s ease-in;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.box input:valid ~ span,
+.box input:focus ~ span {
+  border-left: 2px solid darkcyan;
+  border-right: 2px solid darkcyan;
+  color: darkcyan;
+  transform: translateY(-10px) translateY(-7px);
+  padding: 0 10px;
+  font-size: 0.65em;
+  background: rgb(31, 31, 31);
+  letter-spacing: 0.2em;
+}
+.box input:valid,
+.box input:focus {
+  border: 1px solid darkcyan;
+}
+.box:nth-child(2) input:valid ~ span,
+.box:nth-child(2) input:focus ~ span {
+  background: darkcyan;
+  color: #1d2b3a;
+  border-radius: 2px;
+}
